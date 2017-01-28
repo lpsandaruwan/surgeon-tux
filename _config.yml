@@ -1,0 +1,16 @@
+# Welcome to Jekyll!
+#
+# If you change something here, please rerun `jekyll serve`
+
+# Site settings
+title: SURGEON TUX
+email: lpsandaruwan@gmail.com
+description: I'M ROOT. AND I'M HERE TO HELP YOU
+baseurl: "" # put subpath of your site, e.g. /blog
+url: "" # put the base hostname & protocol for your site
+twitter_username: lpsandaruwan
+github_username:  lpsandaruwan
+paginate: 6
+
+gems: [jekyll-paginate, kramdown]
+markdown: kramdown

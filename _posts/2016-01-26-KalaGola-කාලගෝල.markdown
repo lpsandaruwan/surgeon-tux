@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "KALAGOLA කාලගෝල"
+date:   2017-01-26
+categories: ["archive"]
+author: "Lahiru Pathirage"
+---
+
+[**KalaGola**](http://github.com/lpsandaruwan/kalagola) is a cross platform **Pythonic tool** to traverse through the timeline of your **GitHub hosted font** repository,
+and **generate a video file** to show how your font evolved through time. Just provide your custom **web template** and
+**repository information** as a **YAML file** or as **command line** arguments, KalaGola will serve you your video.
+<br>
+<br>
+
+<h4>How does it work?</h4>
+KalaGola uses [**weasyprint**](http://weasyprint.org/) to **capture html snapshots** after checking out each and every commit made on a **specific
+font file** and copying the font file on that state to the assets directory which html template uses. As soon as possible KalaGola finished capturing images,
+using [**OpenCV**](http://pypi.python.org/pypi/opencv-python) bindings for Python, KalaGola converts captured images to frames and then frames to a video file.
+<br>
+<br>
+
+<h4>How can I use it?</h4>
+Like mentioned above, KalaGola configurations can be given as a YAML file or as command line arguments. If no argument has been provided
+KalaGola uses `config.yml` file by default.
+<br>
+
+**_Contents of config.yml file_**
+<pre>
+name: myfont
+assets_dir: template/assets
+branch: gh-pages
+font_file: fonts/AbhayaLibre-Regular.otf
+index_file: template/index.html
+interval: 100
+repository: abhaya-libre-font
+stylesheet: template/assets/stylesheet.css
+user: mooniak
+</pre>
+
+* `name` - For `name`, provide any name you like(**do not use spaces**), once KalaGola has finished, you will find **name.avi** video file in the **videos** directory from KalaGola  home.
+
+* `assets_dir` - This is where you are going **put your font** while traversing commits. The font file copied to assets directory will be named as **myFont** and you should
+use it in your stylesheet like this or in a better way,
+
+```css
+@font-face {
+    font-family: "My Font";
+    src: url('assets/myfont') format("woff");
+}
+```
+
+* `index_file` - This is the template html file which contains the layout designs, **designed using your font file**,
+ which is to be captured while changing the state of font file.
+
+* `stylesheet` - The stylesheet can be embedded into **html file's header** or YAML file's `stylesheet` field.
+
+* `repository` - This one stands for GitHub repository name.
+
+* `user` - Consider puttting GitHub user name or organization here.
+
+* `branch` - This is the branch of the repository which contains font files, which is affected by [**continuous integration**](https://en.wikipedia.org/wiki/Continuous_integration) process, where font files,
+ ttf or otf files have been automatically built or updated, or simply have been built manually and pushed.
+
+* `font_file` - This is the path to the font file in the `branch`, which KalaGola refers to load the templates and capture images.
+
+* `interval` - This field is used to reduce the CPU utilization while KalaGola capturing snapshot, by default it is 100, which means for every 100 of captures,
+  KalaGola sleeps for a second. For older PCs reduce the `interval` number so they won't get heat up.
+
+ To get an idea about the project structure, please refer [Abhaya Libre Font](https://github.com/mooniak/abhaya-libre-font),
+ which is mentioned in the default `config.yml` file of KalaGola.
+<br>
+
+**_Command line arguments_**<br>
+Simply use command line arguments to **override default settings** in runtime. They are the same as the YAML config file's options.
+Prefer `kalagola -h` for more information,
+
+<pre>
+usage: kalagola.py [-h] [-a ADIR] [-b BRANCH] [-f FONT] [-i INDEX] [-n NAME]
+                   [-r REPO] [-s STYLESHEET] [-t INTERVAL] [-u USER] [-y YAML]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ADIR, --adir ADIR  Directory to put font file dynamically
+  -b BRANCH, --branch BRANCH
+                        Branch containing font files
+  -f FONT, --font FONT  Font file source
+  -i INDEX, --index INDEX
+                        Custom index html file
+  -n NAME, --name NAME  Output file name
+  -r REPO, --repo REPO  GitHub user repository
+  -s STYLESHEET, --stylesheet STYLESHEET
+                        Custom CSS style sheet
+  -t INTERVAL, --interval INTERVAL
+                        Refresh intervals to increase CPU usage
+  -u USER, --user USER  GitHub username/organization name
+  -y YAML, --yaml YAML  Read settings from yaml file
+</pre>
+<br>
+
+<h4>How can I get KalaGola?</h4>
+Download KalaGola releases from here, [https://github.com/lpsandaruwan/kalagola/releases](https://github.com/lpsandaruwan/kalagola/releases)<br>
+You also can obtain the source code from here, [https://github.com/lpsandaruwan/kalagola](https://github.com/lpsandaruwan/kalagola)
+
+<br>
+
+<h4>I have an issue. What can I do?</h4>
+Please feel free to report issues here, [https://github.com/pathumego/kalagola/issues](https://github.com/pathumego/kalagola/issues)
+
+<br>
+
+<h4>Credits and contributors</h4>
+* [Pathum Egodawatta](http://github.com/pathumego)
+* [Lahiru Pathirage](http://github.com/lpsandaruwan)
+
+<br>
+
+<h4>License</h4>
+KalaGola is relased under [GPLv3](http://gplv3.fsf.org/). Anyone is permitted to do copy, edit or redistribute.
