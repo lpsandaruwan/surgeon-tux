@@ -5,7 +5,7 @@
 # Site settings
 title: SURGEON TUX
 email: lpsandaruwan@gmail.com
-description: A JEKYLL POWERED BLOG FOR TERMINAL LOVERS.
+description: A JEKYLL THEME FOR TERMINAL LOVERS.
 baseurl: "" # put subpath of your site, e.g. /blog
 url: "" # put the base hostname & protocol for your site
 twitter_username: lpsandaruwan
