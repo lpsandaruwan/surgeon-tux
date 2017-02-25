@@ -19,11 +19,3 @@ Body font: [Hack by Chris Simpkins](https://github.com/chrissimpkins/Hack)
 I tried my best to give `Surgeon Tux` a look of a root terminal. If you found it interesting,
 please [share it](https://github.com/lpsandaruwan/surgeon-tux). Many thanks.
 
-
-<br>
-<br>
-<br>
-#### [Lahiru Pathirage](http://lahiru.site)
-Contact me, [GitHub](https://github.com/lpsandaruwan)/[Facebook](https://web.facebook.com/skyBlue1992)/[Linkedin](https://lk.linkedin.com/in/lpsandaruwan)/[Twitter](https://twitter.com/lpsandaruwan)
-<br>
-Chat with me, [Telegram](https://telegram.org/) as **lpsandaruwan**

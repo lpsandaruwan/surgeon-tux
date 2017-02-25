@@ -6,8 +6,8 @@
 title: SURGEON TUX
 email: lpsandaruwan@gmail.com
 description: A JEKYLL THEME FOR TERMINAL LOVERS.
-baseurl: "" # put subpath of your site, e.g. /blog
-url: "" # put the base hostname & protocol for your site
+baseurl: "/surgeon-tux" # put subpath of your site, e.g. /blog
+url: "http://lahiru.site" # put the base hostname & protocol for your site
 twitter_username: lpsandaruwan
 github_username:  lpsandaruwan
 paginate: 6
