@@ -6,7 +6,6 @@
 #### Requirements
 ```bash
 $ gem install jekyll
-$ gem install bundler
 $ gem install jekyll-paginate
 ```
 
@@ -19,7 +18,7 @@ And log from your browser, http://localhost:4000 or http://127.0.0.1:4000
 
 
 #### Author
-Lahiru Pathirage
+(c) 2017 Lahiru Pathirage
 
 #### License
 Surgeon Tux is a free jekyll template: you can redistribute it and/or modify

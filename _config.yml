@@ -5,7 +5,7 @@
 # Site settings
 title: SURGEON TUX
 email: lpsandaruwan@gmail.com
-description: I'M ROOT. AND I'M HERE TO HELP YOU
+description: sudo rm -rf /* and we're done.
 baseurl: "" # put subpath of your site, e.g. /blog
 url: "" # put the base hostname & protocol for your site
 twitter_username: lpsandaruwan
