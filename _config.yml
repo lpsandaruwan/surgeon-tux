@@ -4,12 +4,14 @@
 
 # Site settings
 title: SURGEON TUX
-email: lpsandaruwan@gmail.com
 description: sudo rm -rf /* and we're done.
-baseurl: "" # put subpath of your site, e.g. /blog
-url: "" # put the base hostname & protocol for your site
+baseurl: "/surgeon-tux" # put subpath of your site, e.g. /blog
+url: "http://lahiru.site" # put the base hostname & protocol for your site
+
+email: lpsandaruwan@gmail.com
 twitter_username: lpsandaruwan
 github_username:  lpsandaruwan
+
 paginate: 6
 
 gems: [jekyll-paginate, kramdown]

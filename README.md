@@ -5,8 +5,8 @@
 
 #### Requirements
 ```bash
-$ gem install jekyll
-$ gem install jekyll-paginate
+gem install jekyll
+gem install jekyll-paginate
 ```
 
 #### Usage
